@@ -25,9 +25,9 @@ public class PageCal {
         public void enternumber(String arg0) throws InterruptedException {
             for (int i = 0; i < arg0.length(); i++) {
                 if (!String.valueOf(arg0.charAt(i)).equals("-") ){
-                    System.out.println("char="+arg0.charAt(i));
+                    //System.out.println("char="+arg0.charAt(i));
                     driver.findElement(By.xpath("//span[.=" + arg0.charAt(i) + "]")).click();
-                    sleep(1000);
+                    Thread.sleep(1000);
                 } else {
                     driver.findElement(By.xpath("//span[@onclick=\"r('" + arg0.charAt(i) + "')\"]")).click();
 
@@ -36,7 +36,7 @@ public class PageCal {
         }
         public void enteroperator(String op) throws InterruptedException {
             driver.findElement(By.xpath("//span[@onclick=\"r('"+op+"')\"]")).click();
-            sleep(1000);
+            Thread.sleep(1000);
 
         }
 
