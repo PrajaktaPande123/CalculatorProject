@@ -14,17 +14,17 @@ public class StepClass {
        page1.open();
     }
     @When("Entering {string} in the calculator")
-    public void enteringNInTheCalculator(String arg0) {
+    public void enteringNInTheCalculator(String arg0) throws InterruptedException {
         page1.enternumber(arg0);
     }
 
     @And("Enter operator {string} in the calculator")
-    public void enterOperatorOpInTheCalculator(String op) {
+    public void enterOperatorOpInTheCalculator(String op) throws InterruptedException {
         page1.enteroperator(op);
     }
 
     @Then("Checking result as per {string}")
-    public void checkingResultAsPerExpected(String expected) {
+    public void checkingResultAsPerExpected(String expected) throws InterruptedException {
     page1.checkResult(expected);
 
     }
